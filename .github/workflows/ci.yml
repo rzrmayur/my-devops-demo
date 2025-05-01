@@ -18,5 +18,5 @@ jobs:
     - name: Test Flask app
       run: |
         python app.py &
-        sleep 5
-        curl http://localhost:5000
+        sleep 10
+        curl http://127.0.0.1:5000
