@@ -17,6 +17,7 @@ jobs:
         pip install -r requirements.txt
     - name: Test Flask app
       run: |
+        gunicorn --bind 0.0.0.0:5000 app:app &
         python app.py &
         sleep 10
         curl http://127.0.0.1:5000
